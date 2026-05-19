@@ -64,3 +64,19 @@ print(student_1.__dict__)
 del student_1
 
 # print(student_1)  # This will give error because object is deleted 
+
+
+
+
+#modify objetc property
+print(student1.percentage)
+student1.percentage =100;
+print(student1.percentage)
+
+#delete object 
+del student1 
+print(student1)
+
+
+
+
