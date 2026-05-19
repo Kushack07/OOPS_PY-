@@ -1,0 +1,43 @@
+#inhertance 
+#purance class se property ko call krna 
+#reusablitiy of the code 
+#allows one class(child) to reuse the prop and method of another class 
+
+# parent class 
+class Student:
+
+    # Constructor to initialize attributes
+    def __init__(self, name, grade, percentage, team):
+        self.name = name
+        self.grade = grade
+        self.percentage = percentage
+        self.team = team
+
+    # Method to display student details
+    def student_details(self):
+        print(f"{self.name} is in {self.grade} grade with {self.percentage}% from team {self.team}")
+
+
+#object - instance of class 
+stud_1 = student('Kush',11,87)
+stud_2 = student('Luv',12 , 97)
+
+
+#child class -beta 
+class GraduateStudent(student): #graduate student child class inheret prop and methods from student parent class 
+    def __init__(self,name,grade,percentage,stream):  # old parameter from parent class and new paramet in the child class 
+        super().__init__(name,grade,percentage)   #call parent class init 
+        self.stream = stream  #new attribute in child class
+
+    def student_details(self): 
+        super().student_details() #method inhereit from parent class
+        #print(f'stream is {self.stream}')
+
+Grad_student1 = GraduateStudent('Kush',12,97,'PCM')
+Grad_student2 = GraduateStudent('Luv',12,98,'PCM')
+print(Grad_student1.stream)
+print(Grad_student2.percentage)
+print(Grad_student1.name)
+
+
+ 
