@@ -1,1 +1,17 @@
+“Polymorphism is an OOP concept where the same method or function 
+behaves differently for different objects. It means one thing can
+have many forms.”
 
+class Dog:
+    def sound(self):
+        print("Dog barks")
+
+class Cat:
+    def sound(self):
+        print("Cat meows")
+
+d = Dog()
+c = Cat()
+
+d.sound()
+c.sound()
