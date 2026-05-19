@@ -1,0 +1,32 @@
+q> define student class with attribute name,grade ,percentage and team 
+
+   include an __init__ method to intialize these attributes 
+   add a method student_details that prints the student's detail in the formate :
+   "<name> is in <grade> grade with <percentage>% from team<team>".
+
+
+
+ANS :-
+
+# Define Student class
+class Student:
+
+    # Constructor to initialize attributes
+    def __init__(self, name, grade, percentage, team):
+        self.name = name
+        self.grade = grade
+        self.percentage = percentage
+        self.team = team
+
+    # Method to display student details
+    def student_details(self):
+        print(f"{self.name} is in {self.grade} grade with {self.percentage}% from team {self.team}")
+
+
+# Creating objects
+s1 = Student("Kush", 10, 97, "A")
+s2 = Student("Luv", 11, 87, "B")
+
+# Calling method
+s1.student_details()
+s2.student_details()
