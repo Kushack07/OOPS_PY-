@@ -1,0 +1,667 @@
+OOPS Interview Questions with Answers for Nokia Intern Role
+
+These are the most expected OOPS questions with interview-style answers.
+
+⸻
+
+1. What is OOPS?
+
+Answer:
+
+OOPS (Object Oriented Programming System) is a programming paradigm based on objects and classes. It helps in organizing code using concepts like:
+
+* Encapsulation
+* Abstraction
+* Inheritance
+* Polymorphism
+
+Advantages:
+
+* Reusability
+* Security
+* Modularity
+* Easy maintenance
+
+⸻
+
+2. What are the 4 pillars of OOPS?
+
+Answer:
+
+Encapsulation
+
+Binding data and methods together into a single unit.
+
+Example:
+
+class Student {
+private:
+    int marks;
+public:
+    void setMarks(int m) {
+        marks = m;
+    }
+};
+
+⸻
+
+Abstraction
+
+Showing only important details and hiding implementation.
+
+Example:
+
+* ATM machine
+* Car driving
+
+⸻
+
+Inheritance
+
+One class acquiring properties of another class.
+
+class Animal {};
+class Dog : public Animal {};
+
+⸻
+
+Polymorphism
+
+One function behaving differently in different situations.
+
+Types:
+
+* Compile-time
+* Runtime
+
+⸻
+
+3. Difference between Class and Object
+
+Class	Object
+Blueprint	Real instance
+Logical entity	Physical entity
+No memory allocated	Memory allocated
+
+Example:
+
+class Car {};
+Car c1;
+
+⸻
+
+4. What is Encapsulation?
+
+Answer:
+
+Encapsulation means wrapping data and methods together into a single unit and restricting direct access using private members.
+
+Advantages:
+
+* Data hiding
+* Security
+* Better control
+
+⸻
+
+5. What is Abstraction?
+
+Answer:
+
+Abstraction means hiding internal implementation and showing only functionality.
+
+Example:
+
+* You use mobile apps without knowing backend implementation.
+
+Difference:
+
+* Encapsulation → Data hiding
+* Abstraction → Implementation hiding
+
+⸻
+
+6. What is Inheritance?
+
+Answer:
+
+Inheritance allows one class to acquire properties and methods of another class.
+
+Syntax:
+
+class Child : public Parent {};
+
+Advantages:
+
+* Code reuse
+* Reduced redundancy
+
+⸻
+
+7. Types of Inheritance
+
+Answer:
+
+1. Single inheritance
+2. Multiple inheritance
+3. Multilevel inheritance
+4. Hierarchical inheritance
+5. Hybrid inheritance
+⸻
+
+8. What is Polymorphism?
+
+Answer:
+
+Polymorphism means “many forms”.
+
+Types:
+
+1. Compile-time polymorphism
+2. Runtime polymorphism
+
+⸻
+
+9. What is Compile-Time Polymorphism?
+
+Answer:
+
+Achieved using:
+
+* Function overloading
+* Operator overloading
+
+Example:
+
+class A {
+public:
+    int add(int a, int b) {
+        return a + b;
+    }
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+};
+
+⸻
+
+10. What is Runtime Polymorphism?
+
+Answer:
+
+Achieved using:
+
+* Function overriding
+* Virtual functions
+
+Example:
+
+class Base {
+public:
+    virtual void show() {
+        cout << "Base";
+    }
+};
+class Derived : public Base {
+public:
+    void show() {
+        cout << "Derived";
+    }
+};
+
+⸻
+
+11. Difference between Overloading and Overriding
+
+Overloading	Overriding
+Same class	Parent-child class
+Different parameters	Same parameters
+Compile-time	Runtime
+No inheritance needed	Inheritance needed
+
+⸻
+
+12. What is Function Overloading?
+
+Answer:
+
+Multiple functions with same name but different parameters.
+
+Example:
+
+void fun(int a);
+void fun(double b);
+
+⸻
+
+13. What is Function Overriding?
+
+Answer:
+
+Child class redefining parent class function.
+
+Example:
+
+class Parent {
+public:
+    void show() {}
+};
+class Child : public Parent {
+public:
+    void show() {}
+};
+
+⸻
+
+14. What is a Virtual Function?
+
+Answer:
+
+A virtual function allows runtime polymorphism.
+
+Syntax:
+
+virtual void show();
+
+Used so that correct function is called based on object type.
+
+⸻
+
+15. What is a Pure Virtual Function?
+
+Answer:
+
+A virtual function with no definition.
+
+Syntax:
+
+virtual void display() = 0;
+
+Makes class abstract.
+
+⸻
+
+16. What is an Abstract Class?
+
+Answer:
+
+A class containing at least one pure virtual function.
+
+Cannot create object directly.
+
+⸻
+
+17. Can We Create Object of Abstract Class?
+
+Answer:
+
+No.
+
+Because abstract classes are incomplete.
+
+⸻
+
+18. What is Constructor?
+
+Answer:
+
+Special function automatically called when object is created.
+
+Properties:
+
+* Same name as class
+* No return type
+
+⸻
+
+19. Types of Constructors
+
+Answer:
+
+1. Default constructor
+2. Parameterized constructor
+3. Copy constructor
+
+⸻
+
+20. What is Destructor?
+
+Answer:
+
+Special function automatically called when object is destroyed.
+
+Syntax:
+
+~Student() {}
+
+Used for cleanup.
+
+⸻
+
+21. Can Constructor be Virtual?
+
+Answer:
+
+No.
+
+Because object is not fully created yet.
+
+⸻
+
+22. Can Destructor be Virtual?
+
+Answer:
+
+Yes.
+
+Used in inheritance to ensure proper cleanup.
+
+⸻
+
+23. Why Virtual Destructor is Important?
+
+Answer:
+
+Without virtual destructor, child destructor may not execute properly.
+
+⸻
+
+24. What is Copy Constructor?
+
+Answer:
+
+Constructor used to initialize one object from another.
+
+Syntax:
+
+Student(Student &s);
+
+⸻
+
+25. Difference between Shallow Copy and Deep Copy
+
+Shallow Copy	Deep Copy
+Copies address	Copies actual value
+Shared memory	Separate memory
+Dangerous	Safe
+
+⸻
+
+26. What is this Pointer?
+
+Answer:
+
+this pointer stores address of current object.
+
+Example:
+
+this->x = x;
+
+⸻
+
+27. What is Friend Function?
+
+Answer:
+
+A non-member function that can access private members.
+
+Syntax:
+
+friend void display();
+
+⸻
+
+28. What is Static Variable in Class?
+
+Answer:
+
+Shared among all objects.
+
+Only one copy exists.
+
+⸻
+
+29. What is Static Function?
+
+Answer:
+
+Function that can access only static members.
+
+Called using class name.
+
+⸻
+
+30. What is Object Slicing?
+
+Answer:
+
+When derived object is assigned to base object, derived-specific data is lost.
+
+⸻
+
+31. What is Diamond Problem?
+
+Answer:
+
+Occurs in multiple inheritance when same base class appears multiple times.
+
+Solution:
+
+virtual public Base
+
+⸻
+
+32. Difference between struct and class in C++
+
+struct	class
+Members public by default	Members private by default
+
+⸻
+
+33. Why Use Private Data Members?
+
+Answer:
+
+To protect data from unauthorized access.
+
+Provides security.
+
+⸻
+
+34. Why Constructor Has No Return Type?
+
+Answer:
+
+Because constructor initializes object and is automatically called.
+
+⸻
+
+35. Why OOPS is Better than Procedural Programming?
+
+Answer:
+
+* Reusability
+* Security
+* Easy maintenance
+* Better organization
+* Modularity
+
+⸻
+
+36. What Happens if Virtual Keyword is Removed?
+
+Answer:
+
+Function binding becomes early binding.
+
+Parent version executes instead of child version.
+
+⸻
+
+37. What is Early Binding and Late Binding?
+
+Early Binding	Late Binding
+Compile time	Runtime
+Faster	Flexible
+No virtual function	Uses virtual function
+
+⸻
+
+38. What is Access Specifier?
+
+Answer:
+
+Access Specifier	Access
+private	Inside class only
+protected	Inside class + derived
+public	Everywhere
+
+⸻
+
+39. What is Multiple Inheritance?
+
+Answer:
+
+One class inheriting from multiple classes.
+
+class C : public A, public B {};
+
+⸻
+
+40. Why Multiple Inheritance is Dangerous?
+
+Answer:
+
+Can create ambiguity problem and diamond problem.
+
+⸻
+
+41. Real-Time Example of Polymorphism
+
+Answer:
+
+Same payment method:
+
+* UPI
+* Card
+* Net banking
+
+Different implementations for same action.
+
+⸻
+
+42. Real-Time Example of Inheritance
+
+Answer:
+
+Vehicle → Car → ElectricCar
+
+⸻
+
+43. Real-Time Example of Encapsulation
+
+Answer:
+
+Bank account details hidden using private variables.
+
+⸻
+
+44. Real-Time Example of Abstraction
+
+Answer:
+
+Driving a car without knowing engine internals.
+
+⸻
+
+45. What is the Order of Constructor Execution?
+
+Answer:
+
+1. Parent constructor
+2. Child constructor
+
+Destructor order:
+
+1. Child destructor
+2. Parent destructor
+
+⸻
+
+46. Coding Question They May Ask
+
+Create Student Class
+
+class Student {
+private:
+    string name;
+    int marks;
+public:
+    void setData(string n, int m) {
+        name = n;
+        marks = m;
+    }
+    void display() {
+        cout << name << " " << marks;
+    }
+};
+
+⸻
+
+47. Bank Account Program
+
+class Bank {
+private:
+    int balance;
+public:
+    void deposit(int amt) {
+        balance += amt;
+    }
+    void show() {
+        cout << balance;
+    }
+};
+
+⸻
+
+48. Interviewer May Ask:
+
+Which OOPS concept do you use most?
+
+Good Answer:
+
+I mainly use encapsulation and inheritance while building projects because they improve code organization, reusability, and maintainability.
+
+⸻
+
+49. Interviewer May Ask:
+
+Where did you use OOPS in your project?
+
+Answer:
+
+In my full-stack projects, I used:
+
+* Classes for user handling
+* Encapsulation for data security
+* Inheritance for reusable components
+* Polymorphism for flexible functionality
+
+⸻
+
+50. Most Important Questions to Revise Before Interview
+
+Revise these strongly:
+
+* Virtual function
+* Constructor
+* Destructor
+* Overloading vs overriding
+* Encapsulation
+* Inheritance
+* Polymorphism
+* Abstract class
+* Copy constructor
+* Deep copy vs shallow copy
+
+These are highly likely in intern interviews.
